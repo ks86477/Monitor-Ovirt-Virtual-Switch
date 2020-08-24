@@ -1,1 +1,2 @@
+# Monitor-Ovirt-Virtual-Switch 
 Python and PowerShell scripts for monitoring network traffic in an oVirt hypervisor virtual environment. These scripts use Snort, the oVirt API, and Active Directory via PowerShell, to monitor for network traffic breaking network policy, get the violating source IP, and perform actions to enforce network policy. These scripts specifically look for nmap scans, disable the virtual NIC of the Virtual Machine originating these scans, and disable the Windows user account responsible for these nmap scans.
