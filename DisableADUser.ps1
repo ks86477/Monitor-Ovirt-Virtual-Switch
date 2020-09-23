@@ -1,16 +1,16 @@
 #############################################################################
-# DisableADUser.ps1  -  PowerShell Script									#
-# ---																		#
-# Github @ks86477															#
-# Date: April 13, 2020														#
+# DisableADUser.ps1  -  PowerShell Script																		#
+# ---																																				#
+# Github @ks86477																														#
+# Date: April 13, 2020																											#
 #############################################################################
 
 #############################################################################
-# Script Description														#
-# ---																		#
+# Script Description																												#
+# ---																																				#
 # This script takes a username as an argument, remote connects to the       #
-# domain controller, and disables that user account on the domain.			#
-# 																			#
+# domain controller, and disables that user account on the domain.					#
+# 																																					#
 #############################################################################
 
 
