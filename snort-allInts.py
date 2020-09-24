@@ -2,31 +2,31 @@
 # -*- coding: utf-8 -*-
 #
 #############################################################################
-# snort-allInts.py  -  Python3 script										#
-# ---																		#
-# Github @ks86477															#
-# Date: April 13, 2020														#
+# snort-allInts.py  -  Python3 script
+# ---
+# Github @ks86477
+# Date: April 13, 2020
 #############################################################################
 
 #############################################################################
-# Script Description														#
-# ---																		#
-# This script performs monitoring of ALL interfaces attached to the VM,	by	#
-# starting a seperate thread for each interface, running snort on that		#
-# interface.  The main method creates a list of all interfaces on the       #
-# system, then calls snort_If method for each interface, passing the        #
-# interface name and the "violatingIPsDict" dictionary, which is used to 	#
-# store the source violating IP addresses, and the number of violations 	#	
-# associated with each IP. This same dictionary is shared across all		#
-# snort_If threads which are running.  Every 30 seconds, the main method  	#
-# checks the dictionary for new violation entries, if any IP addresses		#
-# are found surpassing the violation limit, action is taken, calling 		#
-# GetViolatingADUser.ps1 to find out if the user is an administator, and	#
-# calling DisableADUser.ps1 and ShutNicOfIP.py if the user is not an		#
-# administrator.															#
-#																			#
-# Note: Running this script requires snort and powershell to be installed.  # 														
-#        																	#			
+# Script Description
+# ---
+# This script performs monitoring of ALL interfaces attached to the VM,	by
+# starting a seperate thread for each interface, running snort on that
+# interface.  The main method creates a list of all interfaces on the
+# system, then calls snort_If method for each interface, passing the
+# interface name and the "violatingIPsDict" dictionary, which is used to
+# store the source violating IP addresses, and the number of violations	
+# associated with each IP. This same dictionary is shared across all
+# snort_If threads which are running.  Every 30 seconds, the main method
+# checks the dictionary for new violation entries, if any IP addresses
+# are found surpassing the violation limit, action is taken, calling
+# GetViolatingADUser.ps1 to find out if the user is an administator, and
+# calling DisableADUser.ps1 and ShutNicOfIP.py if the user is not an
+# administrator.
+#
+# Note: Running this script requires snort and powershell to be installed.
+#
 #############################################################################
 
 
