@@ -2,27 +2,27 @@
 # -*- coding: utf-8 -*-
 #
 #############################################################################
-# ShutNicOfIP.py  -  Python3 script											#
-# ---																		#
-# Github @ks86477															#
-# Date: April 13, 2020														#
+# ShutNicOfIP.py  -  Python3 script
+# ---
+# Github @ks86477
+# Date: April 13, 2020
 #############################################################################
 
 #############################################################################
-# Script Description														#
-# ---																		#
-# This script takes an IP address as an argument, and shuts down the		#
-# virtual NIC associated with that IP address.							 	#
-# This is accomplished by making oVirt API requests to first get a list of  #
-# ALL VMs, then retriving info on the NICs of each VM. The NIC info of each #
-# VM is searched looking for the violating IP address argument.	 If the 	#
-# NIC with the violaitng IP address assigned is found, that NIC is disabled	#	
-# using the oVirt API to request the NIC be disabled.						#
-#																			#
-# Note: The "ovirt-guest-agent" needs to be installed on ALL VMs for this   #
-# script to work, as the agent is required to report the assigned IP        #
-# addresses to the oVirt Manager. Without this, the violating IP address	#
-# will never be found.														#
+# Script Description
+# ---
+# This script takes an IP address as an argument, and shuts down the
+# virtual NIC associated with that IP address.
+# This is accomplished by making oVirt API requests to first get a list of
+# ALL VMs, then retriving info on the NICs of each VM. The NIC info of each
+# VM is searched looking for the violating IP address argument.	 If the
+# NIC with the violaitng IP address assigned is found, that NIC is disabled	
+# using the oVirt API to request the NIC be disabled.
+#
+# Note: The "ovirt-guest-agent" needs to be installed on ALL VMs for this
+# script to work, as the agent is required to report the assigned IP
+# addresses to the oVirt Manager. Without this, the violating IP address
+# will never be found.
 #############################################################################
 
 import requests
