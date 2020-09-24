@@ -2,26 +2,26 @@
 # -*- coding: utf-8 -*-
 #
 #############################################################################
-# ovirtMethods.py  -  Python3 script					    #
-# ---									    #
-# Github @ks86477							    #
-# Date: April 13, 2020							    #
+# ovirtMethods.py  -  Python3 script
+# ---
+# Github @ks86477
+# Date: April 13, 2020
 #############################################################################
 
 #############################################################################
-# Script Description						            #
-# ---								            #
-# This script handles the creation of an oVirt API session, using the	    #
-# username and password to create an oVirt API session, returning the	    #
-# authentication token so another script (like ShutNicOfIP) can call this   #
-# script to create a new oVirt API session, and use the returned auth token #
-# to communicate with the API in the same session			    #
-#									    #
-# Note: to communicate with the API, the ovirt Manger's cetificate	    #
-# (ovirt.crt) must be exported, and stored in the same folder as this	    #
-# script, and any script that interacts with the API, like ShutNicOfIP.py.  #
-# Note when running requests.post, one parameter is "verify='ovirt.crt'",   # 
-# indicating to use that certificate file to secure the request.            #
+# Script Description
+# ---
+# This script handles the creation of an oVirt API session, using the
+# username and password to create an oVirt API session, returning the
+# authentication token so another script (like ShutNicOfIP) can call this
+# script to create a new oVirt API session, and use the returned auth token
+# to communicate with the API in the same session
+#
+# Note: to communicate with the API, the ovirt Manger's cetificate
+# (ovirt.crt) must be exported, and stored in the same folder as this
+# script, and any script that interacts with the API, like ShutNicOfIP.py.
+# Note when running requests.post, one parameter is "verify='ovirt.crt'", 
+# indicating to use that certificate file to secure the request.
 #############################################################################
 
 import requests
