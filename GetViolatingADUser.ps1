@@ -1,21 +1,21 @@
 #############################################################################
-# GetViolatingADUser.ps1  -  PowerShell Script								#
-# ---																		#
-# Github @ks86477															#
-# Date: April 13, 2020														#
+# GetViolatingADUser.ps1  -  PowerShell Script
+# ---
+# Github @ks86477
+# Date: April 13, 2020
 #############################################################################
 
 #############################################################################
-# Script Description														#
-# ---																		#
-# This script takes an IP address as an argument, and finds the user logged	#
-# into the violating PC, by creating a remote PowerShell Session to the 	#
-# domain controller, then from there, creating another remote PowerShell    #
-# session to the violating PC, where the currently logged in user can be    #
-# found.																	#
-#																			#
-# Note: The remote PC needs to allow PS remote sessions through the         #
-# firewall, or have firewall disabled for this script to work               #
+# Script Description
+# ---
+# This script takes an IP address as an argument, and finds the user logged
+# into the violating PC, by creating a remote PowerShell Session to the
+# domain controller, then from there, creating another remote PowerShell
+# session to the violating PC, where the currently logged in user can be
+# found.
+#
+# Note: The remote PC needs to allow PS remote sessions through the
+# firewall, or have firewall disabled for this script to work
 #############################################################################
 
 
